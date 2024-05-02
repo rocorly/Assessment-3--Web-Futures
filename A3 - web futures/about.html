@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel ="stylesheet" href="style.css">
+    <title>Chair House</title>
+</head>
+
+<body>
+<section class="header">
+    <div class="logo">
+        <h1>Chair House</h1>
+    </div>       
+        <input type="checkbox" id="check"> 
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        <div class="navbar">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="selection.html">Selection</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div> 
+</section>
+
+<div class="container">
+    <section class="drop-menu">
+        <div class="wrapper">
+            <div class="parent-tab">
+                <input type="radio" name="tab" id="tab-1" checked>
+                <label for="tab-1" class="tab1">
+                    <span>About</span>
+                    <div class="icon"><i class="fa-solid fa-plus"></i></div>
+                </label>
+                <div class="content">
+                    <p>At Chair House, we offer a selection of stylish and functional chairs. With a passion for quality craftsmanship and contemporary
+                         design, we curate a carefully selected collection of furniture pieces to enhance every space.</p>
+                         <p>Whether for the house or office, we offer timeless classics designed for all day comfort. Experience a range of unique and stylish chairs from the discreet to the bold, we offer a chair
+                            for everyone's tastes.
+                             </p>
+                </div>
+            </div>
+    
+            <div class="parent-tab">
+                <input type="radio" name="tab" id="tab-2">
+                <label for="tab-2" class="tab2">
+                    <span>Terms and Conditions</span>
+                    <div class="icon"><i class="fa-solid fa-plus"></i></div>
+                </label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ea itaque ex. Tenetur porro laudantium sit aliquam excepturi harum, quia facilis, deleniti magni consequuntur placeat incidunt. Rem obcaecati harum delectus!</p>
+                </div>
+            </div>
+        
+            <div class="parent-tab">
+                <input type="radio" name="tab" id="tab-3">
+                <label for="tab-3" class="tab3">
+                    <span>Shipping</span>
+                    <div class="icon"><i class="fa-solid fa-plus"></i></div>
+                </label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nihil esse at ullam dolores ea, enim ipsam tempore quidem, deserunt delectus magnam quas dolore mollitia animi perferendis obcaecati quaerat et?</p>
+                </div>
+            </div>
+        
+            <div class="parent-tab">
+                <input type="radio" name="tab" id="tab-4">
+                <label for="tab-4" class="tab4">
+                    <span>Privacy</span>
+                    <div class="icon"><i class="fa-solid fa-plus"></i></div>
+                </label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nihil esse at ullam dolores ea, enim ipsam tempore quidem, deserunt delectus magnam quas dolore mollitia animi perferendis obcaecati quaerat et?</p>
+                </div>
+            </div>
+        </div>    
+    </section>
+    
+
+</div>
+
+
+
+    <section id="footer">
+        <div class="container-f">
+            <div class="slot1">
+                <div class="foot-links">
+                    <ul>
+                        <li><a class="active" href="about.html">About</a></li>
+                        <li><a href="about.html">Terms and Conditions</a></li>
+                        <li><a href="about.html">Shipping</a></li>
+                        <li><a href="about.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slot2">
+                <div class="foot-links-r">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.screenY > 0);
+        })
+    </script>
+</body>
+</html>

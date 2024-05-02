@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel ="stylesheet" href="style.css">
+    <title>Chair House</title>
+</head>
+
+<body>
+        <section class="header">
+            <div class="logo">
+                <h1>Chair House</h1>
+            </div>       
+            <input type="checkbox" id="check"> 
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="navbar">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="selection.html">Selection</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div> 
+        </section>
+
+        <section id="products">
+            <div class="container">
+                <div class="img-g">
+                    <div class="content1" id="con1">
+                        <img src="assets/finn_juhl_45_lounge_chair_-_replica_-_grey_cashmere_1.png" alt="">
+                    </div>
+                    <div class="content2" id="con2">
+                        <img src="assets/replica_form_dining_chair_with_black_timber_legs.png" alt="">
+                    </div>
+                    <div class="sub1" id="sb1">
+                       <h3>The Finn Juhl 45 Chair</h3>
+                    </div>
+                    <div class="sub2" id="sb2">
+                        <h3>The Form Dining Chair</h3>
+                    </div>
+                    <div class="content3" id="con3">
+                        <img src="assets/replica_grande_papilio_armchair.png" alt="">
+                    </div>
+                    <div class="content4" id="con4">
+                        <img src="assets/peterson_timber_chair_by_dane_craft_in_espresso_brown.png" alt="">
+                    </div>
+                    <div class="sub3" id="sb3">
+                        <h3>Replica Grande Papilio Armchair</h3>
+                    </div>
+                    <div class="sub4" id="sb4">
+                        <h3>Peterson Timber Chair</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="footer">
+        <div class="container-f">
+            <div class="slot1">
+                <div class="foot-links">
+                    <ul>
+                        <li><a class="active" href="about.html">About</a></li>
+                        <li><a href="about.html">Terms and Conditions</a></li>
+                        <li><a href="about.html">Shipping</a></li>
+                        <li><a href="about.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slot2">
+                <div class="foot-links-r">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.screenY > 0);
+        })
+    </script>
+</body>
+</html>

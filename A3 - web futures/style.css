@@ -1,0 +1,900 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+}
+
+/* line 10 - 85 Navigation and Responsive Icon */
+
+.header{
+    top: 0;
+    width: 100%;
+    position:fixed;
+    align-items: center;
+    display: flex;
+    border: black;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    background-color: white;
+    z-index:1000000;
+}
+
+.logo{
+    margin: 1rem;
+    margin-left: 2rem;
+}
+
+.navbar{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    flex:1;
+    text-align:right;
+    align-items: center;
+}
+
+ul {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li { 
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+} 
+
+.navbar ul li a{
+    margin: 2rem;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.navbar ul li a:hover{
+    color: #505050;
+    text-decoration: underline #505050;
+    transition: ease 0.3s;
+}
+
+.navbar a.active, a:hover{
+    transition: .5s;
+}
+
+.checkbtn{
+    position: relative;
+    align-items: center;
+    font-size: 30px;
+    padding-left: 24rem;
+    padding-right: 3em;
+    line-height: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* line 89 - 148 Navigation dropdown with hamburger menu */
+
+@media (max-width:952px){
+    .logo{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .navbar li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px){
+    .checkbtn{
+        display: block;
+    }
+
+    .navbar ul{
+        position: fixed;    
+        width: 30%;
+        height: 20vh;
+        background: white;
+        top: 50px;
+        right: 0%;
+        text-align: left;
+        transition: all .5s;
+    }
+    
+    .navbar ul li{
+        display: block;
+        text-align: left;
+        margin-top: 2em;
+    }
+
+        .navbar ul li a{
+        font-size: 16px;
+        color:black;
+    }
+
+    a:hover, a.active{
+        background: none;
+        color: #505050;
+    }
+
+    #check:checked ~ .navbar ul{
+        left: 100%;
+    }
+}
+
+
+@media (max-width:613px){
+    .logo{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .navbar li a{
+        font-size: 12px;
+    }
+    .checkbtn{
+        position: fixed;
+    }
+}
+
+/* line 152 -203 Container item side by side display*/
+
+.grid-container{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    padding-left:5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grid-item {
+    max-height: 50%;
+    max-width: 40%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    text-align: center;
+    grid-gap: 3em;
+}
+
+.grid-item img{
+    max-width: 50%;
+}
+
+.grid-item h3{
+    margin-top: 10px;
+}
+
+.grid-item p{
+    margin: 1rem;
+}
+
+.grid-item button{
+    margin: 10px;
+    padding: 10px 20px;
+    color: #a0a0a0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid-item button:hover{
+    background-color:#797474;
+    color:white;
+    transition: ease 0.3s;
+}
+
+/* line 207 - 300 Responsive design transform container to grid and scaling*/
+
+@media(max-width:1024px){
+    .grid-item{     
+        min-height: 45%;
+        min-width: 45%;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        text-align: center;
+        grid-gap: 3em;
+    }
+
+    .grid-container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left:2rem;
+        padding-right: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+@media (max-width:768px){
+    .grid-container{
+        margin-left: 1rem;
+        margin-right: 1rem; 
+        display: grid;
+        padding-left: 2em;
+        padding-right: 2em;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .grid-item{     
+        min-height: 90%;
+        min-width: 90%;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        text-align: center;
+        grid-gap: 3em;
+    }
+
+    .grid-item img{
+        max-width: 45%;
+    }   
+}
+
+@media(max-width:613px) {
+    .grid-container{     
+        display: grid;
+        padding-left: .5em;
+        padding-right: .5em;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .grid-item{     
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        text-align: center;
+        grid-gap: 3em;
+    }
+
+    .grid-item img{
+        max-width: 40%;
+    }
+
+    .grid-item p{
+        font-size:18px;
+    }
+    
+    .grid-item button{
+        margin: 8px;
+        padding: 8px 16px;
+        color: #a0a0a0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+/* line 304 - 330 Container and a page divider */
+
+.container{ 
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    font-size: 20px;
+}
+
+.divider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #dddddd;
+    border-width: 0;
+    border-bottom-width: 2px;
+}
+
+/* line 334 - 381 responsive*/
+
+@media(max-width:768px) {
+    .container {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    } 
+
+    .container p {
+        font-size: 20px;
+        margin-right: 1em;
+        margin-left: 1em;
+        text-align: left;
+    }
+    .container h1{
+        font-size: 22px;
+    }
+}
+
+@media(max-width:613px) {
+    .container{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .container p{
+        font-size: 18px;
+    }
+
+    .container h1{
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:430px) {
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .container p{
+        font-size: 14px;
+    }
+
+    .container h1{
+        font-size: 18px;
+    }
+
+}
+
+/* line 385 - 498 grid container and nesting elements*/
+
+.grid-section{
+    margin:4rem;
+}
+
+.container-g{
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(579px, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    grid-template-areas: 
+    "text1 image1"
+    "image2 text2";
+}
+
+.slot1 {
+    grid-column: 1/2;
+    grid-area: text1;
+}
+
+.slot2 {
+    grid-column: 2/4;
+    grid-area: image1;
+}
+
+.slot3 {
+    grid-column: 1/3;
+    justify-self: center;
+    align-self: center;
+    grid-area: image2;
+}
+
+.slot4 {
+    grid-column: 4/3;
+    grid-area: text2;
+}
+
+.slot1 h2{
+   padding-top: 3rem;
+   font-size: 20px;
+   margin-left: 2rem;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+
+}
+
+.slot1 p{
+   font-size: 20px;
+   margin-left: 2rem;
+   margin-bottom: 2rem;
+}
+
+
+.slot4 h2{
+    padding-top: 3rem;
+   font-size: 20px;
+   margin-left: 2rem;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+
+}
+
+.slot4 p{
+    font-size: 20px;
+   margin-left: 2rem;
+   margin-left: 2rem;
+   margin-bottom: 2rem;
+}
+
+.slot2 img{
+    max-width: 100%;
+}
+
+.slot3 img{
+    max-width: 100%;
+}
+
+.slot1 button{
+    margin: 10px;
+    margin-left: 2rem;
+    padding: 10px 20px;
+    color: #a0a0a0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.slot1 button:hover{
+    background-color:#797474;
+    color:white;
+    transition: ease 0.3s;
+}
+
+.slot4 button{
+    margin: 10px;
+    margin-left: 2rem;
+    padding: 10px 20px;
+    color: #777777;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.slot4 button:hover{
+    background-color:#5c5a5a;
+    color:white;
+    transition: ease 0.3s;
+}
+
+/* line 502 - 585 responsive grid and formatting. Use of grid template areas position items*/
+
+@media(max-width:1290px){
+    .container-g{
+        margin: 2rem;
+        text-align: center;
+        grid-template-columns:1fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
+        grid-template-areas: 
+        "text1"
+        "image1"
+        "text2"
+        "image2"
+        ;
+    }
+
+    .slot1 p, .slot4 p{
+        font-size: 16px
+    }
+
+    .slot1 h2, .slot4 h2{
+        padding-top: 0;
+        text-align: center;
+    }
+}
+
+@media(max-width:768px){
+    .slot1 p, .slot4 p{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .slot1 button, .slot4 button{
+        padding: 20px 50px;
+        font-size: 18px;
+    }
+
+    .slot4 button{
+        margin-bottom: 5rem;
+    }
+
+    .slot2 img, .slot3 img{
+        max-width: 80%;
+    }
+    
+}
+
+@media(max-width:613px){
+    .slot1 p, .slot4 p{
+        font-size: 18px;
+    }
+
+    .slot2 img {
+        max-width: 90%;
+    }
+    
+    .slot3 img{
+        max-width: 70%;
+    }
+}
+
+@media(max-width:430px) {
+    .container-g{
+        padding: 0;
+    }
+
+    .slot1 p, .slot4 p{
+        font-size: 14px
+    }
+
+    .slot2 img {
+        max-width: 80%;
+    }
+    
+    .slot3 img{
+        max-width: 60%;
+    }
+
+    .slot1 button, .slot4 button{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .slot4 button{
+        margin-bottom: 0;
+    }
+}
+
+
+.container img{
+    max-width: 100%;
+    padding-bottom: 2rem;
+}
+
+/* line 595 - 656 Footer left side + responsive format*/
+
+.foot-links{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10rem;
+    text-align:left;
+    align-items: center;
+    border-top: black;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 1px;
+}
+
+
+.foot-links ul li { 
+    display: inline-block;
+    position: relative;
+} 
+
+.foot-links ul li a{
+    margin-left: 0;
+    margin-right: 2rem;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.foot-links ul li a:hover{
+    color: #505050;
+    text-decoration: underline #505050;
+    transition: ease 0.3s;
+}
+
+@media(max-width:768px){
+    .foot-links{
+        padding-left: 5rem;
+        padding-right: 1rem;
+    }
+
+    .foot-links ul li a{
+        font-size: 18px;
+    }
+
+    .foot-links ul li{
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:613px){
+    .foot-links{
+        padding-left: 4rem;
+        padding-right: 2rem;
+    }
+}
+
+@media(max-width:430px){
+    .foot-links{
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+}
+
+/* line 660 - 740 Footer right side + responsive format*/
+
+.foot-links-r{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10rem;
+    text-align:right;
+    align-items: center;
+    border-top: black;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 1px;
+    z-index: 100000;
+}
+
+.foot-links-r ul li { 
+    display: inline-block;
+    position: relative;
+} 
+
+.foot-links-r ul li a{
+    margin-left: 0;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.foot-links-r ul li a:hover{
+    color: #505050;
+    text-decoration: underline #505050;
+    transition: ease 0.3s;
+}
+
+.container-f{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.container-f .slot1{
+    grid-column: 1/2;
+}
+
+.container-f .slot2{
+    grid-column: 2/4;
+}
+
+@media(max-width:768px){
+    .foot-links-r{
+        padding-right: 5rem;
+        padding-left: 15rem;
+
+    }
+
+    .foot-links-r ul li a{
+        font-size: 32px;
+    }
+
+    .foot-links-r ul li{
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:613px){
+    .foot-links-r{
+        padding-right: 10rem;
+        padding-left: 11rem;
+    }
+
+    .foot-links-r ul li a{
+        font-size: 28px;
+    }
+}
+
+@media(max-width:430px){
+    .foot-links-r{
+        padding-left: 1rem;
+        padding-right: 2rem;
+    }
+}
+
+/* line 744 - 800 grid format for Selection Page*/
+
+.img-g{
+    margin: 7.5rem;
+    display: grid;
+    grid-gap: .75em;
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: .25fr 0.1fr .25fr 0.1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "con1 con2"
+    "sb1 sb2"
+    "con3 con4"
+    "sb3 sb4"
+    ;
+}
+
+
+.content1, .content2, .content3, .content4{
+    background: #DCDCDC
+}
+
+
+.sub1 , .sub2{
+    padding-bottom: 1em;
+}
+
+.content1{
+    grid-area: con1;
+}
+
+.content2{
+    grid-area: con2;
+}
+
+.content3{
+    grid-area: con3;
+}
+
+.content4{
+    grid-area: con4;
+}
+
+.sub1{
+    grid-area: sb1;
+}
+
+.sub2{
+    grid-area: sb2;
+}
+
+.sub3{
+    grid-area: sb3;
+}
+
+.sub4{
+    grid-area: sb4;
+}
+
+/* line 804 - 822 grid format for Selection Page responsive, use of grid template areas to assign positioning*/
+
+@media(max-width:768px){
+    .img-g{
+        margin-right: 2rem;
+        margin-left: 2rem;
+        grid-gap: .55em;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 0.2fr;
+        grid-template-areas: 
+        "con1"
+        "sb1"
+        "con2"
+        "sb2"
+        "con3"
+        "sb3"
+        "con4"
+        "sb4"
+        ;
+    }
+}
+
+/* line 826 - 900 drop-down menu for about page*/
+
+.drop-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    z-index: 10000;
+}
+
+.wrapper{
+    max-width: 600px;
+    padding:0 20px;
+}
+
+.wrapper .parent-tab {
+    margin-bottom: 8px;
+    border-radius: 3px;
+}
+
+.wrapper .parent-tab label{
+    background: #fff;
+    border: #505050 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+.wrapper label span{
+    font-size: 16px; 
+    font-weight: 400;
+}
+
+.wrapper label .icon{
+    display: block;
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: relative;
+    justify-content: center;
+}
+
+.wrapper .parent-tab .content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.wrapper .parent-tab .content p{
+    font-size: 14px;
+    overflow: hidden;
+    border-style: solid;
+    border:#505050 1px;
+}
+
+.wrapper input{
+    display: none;
+}
+
+.parent-tab input:checked ~ .content{
+    max-height: 100vh;
+}
+
+.tab1 .tab2 .tab3 .tab4 input:checked ~ .content{
+    max-height: 100vh;
+}
+
+.parent-tab input:checked ~ label .icon i:before{
+    content: '\f068';
+}

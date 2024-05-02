@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel ="stylesheet" href="style.css">
+    <title>Chair House</title>
+</head>
+
+<body>
+        <section class="header">
+            <div class="logo">
+                <h1>Chair House</h1>
+            </div>       
+            <input type="checkbox" id="check"> 
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="navbar">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="selection.html">Selection</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div> 
+        </section>
+
+
+    <section id="grid-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="assets/finn_juhl_45_lounge_chair_-_replica_-_grey_cashmere_1.png" alt="chair-1">
+                <h3>The Finn Juhl 45 Chair</h3>
+                <p>Finn Juhl 45 Chair is hand crafted from ash hardwood timber; and is perfect for the study, lounge room or nursery. 
+                    The comfortable seat and graceful lines ensure this designer piece will suit both modern and classic design homes.</p>
+                <button>More info</button>
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/replica_form_dining_chair_with_black_timber_legs.png" alt="chair-2">
+                <h3>The Form Dining Chair</h3>
+                <p>This stunning modern Scandinavian creation is the Form Dining Chair and was created by Simon Legald.
+                    He created a chair with a mixed composite of materials (Timber and Polypropylene) that seamlessly join as a single unit.</p>
+                <button>More info</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="site-desc">
+        <div class="container">
+            <h1>Chair House</h1>
+            <div class="divider"></div>
+            <p>Are you ready to transform your living space into a haven of comfort and elegance? Look no further! 
+                <br>At Chair House, we're dedicated to bringing you the finest selection of chairs designed to enhance your lifestyle.
+                <br><br>
+                Sink into luxury with our meticulously crafted chairs, tailored to cradle you in blissful relaxation after a long day. 
+                Each chair is expertly designed with plush cushioning and ergonomic support, ensuring unparalleled comfort for hours on end. 
+            </p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <section id="grid-section">
+        <div class="container-g">
+            <div class="slot1">
+                <h2>Togo Chair</h2>
+                <p>The Togo Chair is one of the most recognisable designs from the early 1980's. Everybody just loves this chair design, with is low and soft
+                     exterior just inviting you to sit and relax with a good book or glass of wine.</p>
+                    <p>The interior is crafted from High-density foam and the fabric has a stretch to it.
+                         The buttons and many folds on this lounge chair add to its charm and creates the retro look on this lounge chair.</p>
+                         <button>More info</button>
+            </div>
+            <div class="slot2">
+                <img src="assets/replica_toga_chair_with_blue_fabric_-_1980_s_lounge_chair.jpg" alt="chair-3">
+            </div>
+            <div class="slot3">
+                <img src="assets/ovalia_chair_red_1_1.jpg" alt="chair-4">
+            </div>
+            <div class="slot4">
+                <h2>Ovalia Egg Chair in Red</h2>
+                <p>The Ovalia egg chair is perhaps the most recognisable pieces of furniture from the late 1960's. The thick layer of soft foam on the inside removes noise and allows the mind 
+                    time to relax and reset. These stunning Ovalia chairs use the same materials and dimensions of the Henrick Thor-Larsen design, and truly are the best available replica's in the Australian market today. </p>
+                    <button>More info</button>
+                </div>
+        </div>
+    </section>
+
+    <section id="qual-section">
+        <div class="container">
+            <h1>Uncompromised Quality</h1>
+            <div class="divider"></div>
+            <p>Crafted with precision and attention to detail, our chairs are built to last. From the finest hardwood frames to premium upholstery fabrics, each piece is constructed using
+                 the highest quality materials, guaranteeing durability and longevity. Experience the ultimate blend of comfort, style, and quality at Chair House.
+            </p>
+            <img src="assets/Stylish-Papasan-accent-chair-living-room-ideas-by-Decorilla-designer-Meral-Y.jpg" alt="">
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container-f">
+            <div class="slot1">
+                <div class="foot-links">
+                    <ul>
+                        <li><a class="active" href="about.html">About</a></li>
+                        <li><a href="about.html">Terms and Conditions</a></li>
+                        <li><a href="about.html">Shipping</a></li>
+                        <li><a href="about.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slot2">
+                <div class="foot-links-r">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.screenY > 0);
+        })
+    </script>
+</body>
+</html>
